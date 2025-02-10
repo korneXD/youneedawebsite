@@ -31,15 +31,15 @@ export const services = [
 export const projects = [
   {
     title: "Blog Web",
-    src: "https://utfs.io/a/vdrkhh77op/qVW5kgUPFS3w7agXzLjgaZyRfiDxFKI5Mc3YervHmP20JAuo",
+    src: "https://github.com/korneXD/blog2025",
   },
   {
     title: "Budget Manager",
-    src: "https://utfs.io/a/vdrkhh77op/qVW5kgUPFS3w7agXzLjgaZyRfiDxFKI5Mc3YervHmP20JAuo",
+    src: "https://github.com/korneXD/budget-manager",
   },
   {
     title: "CodeByByte",
-    src: "https://utfs.io/a/vdrkhh77op/qVW5kgUPFS3w7agXzLjgaZyRfiDxFKI5Mc3YervHmP20JAuo",
+    src: "https://codebybyte.hu",
   },
 ];
 
