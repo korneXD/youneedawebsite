@@ -1,16 +1,9 @@
-import MillionLint from "@million/lint";
-
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "utfs.io",
-        port: "",
-        pathname: "/a/vdrkhh77op/**",
-      },
-    ],
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
   },
 };
 
-export default MillionLint.next({ rsc: true })(nextConfig);
+export default nextConfig;

@@ -13,8 +13,10 @@
     "@tabler/icons-react": "^3.30.0",
     "@tailwindcss/postcss": "^4.0.4",
     "clsx": "^2.1.1",
+    "fs": "^0.0.1-security",
     "motion": "^12.4.2",
     "next": "15.1.6",
+    "path": "^0.12.7",
     "postcss": "^8.5.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -26,9 +28,12 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.26.8",
     "@eslint/eslintrc": "^3",
-    "eslint": "^9",
+    "@next/eslint-plugin-next": "^15.1.6",
+    "eslint": "^9.20.0",
     "eslint-config-next": "15.1.6",
+    "eslint-plugin-next": "^0.0.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11"
   }

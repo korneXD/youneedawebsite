@@ -12,11 +12,13 @@ export const metadata = {
     "Website maker Kecskemét",
     "Custom website Kecskemét",
   ],
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
+  ),
   openGraph: {
     type: "website",
     locale: "hu_HU",
-    url: process.env.NEXT_PUBLIC_BASE_URL,
+    url: process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000",
     title,
     description,
     siteName: title,

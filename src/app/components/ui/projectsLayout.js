@@ -5,6 +5,7 @@ import Github from "./github";
 import { projects } from "@/app/lib/utils";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
+
 export default function ProjectsLayout() {
   const [inViewRef, inView] = useInView({
     threshold: 0.1,
