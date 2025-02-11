@@ -7,16 +7,17 @@ import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
 export default function ProjectsLayout() {
-  const [inViewRef, inView] = useInView({
+  const { ref: titleRef, inView: titleInView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
+
   return (
     <section className="w-full space-y-8 text-center">
       <motion.div
-        ref={inViewRef}
+        ref={titleRef}
         initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        animate={titleInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.2, duration: 0.5 }}
         className="space-y-2"
       >
@@ -30,15 +31,15 @@ export default function ProjectsLayout() {
         {projects.map((e, i) => {
           return (
             <motion.li
-              ref={inViewRef}
               key={i}
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: i * 0.2, duration: 0.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.4 }}
               className="flex w-64 cursor-pointer flex-row items-center justify-around rounded-lg border border-gray-300 p-4 shadow-md transition-shadow duration-300 hover:shadow-lg"
             >
               <Link href={e.src} target="_blank">
-                <Github className={"transition-all hover:text-gray-400"} />
+                <Github className="transition-all hover:text-gray-400" />
               </Link>
               <h3 className="text-xl">{e.title}</h3>
             </motion.li>
